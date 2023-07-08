@@ -1,31 +1,31 @@
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import './App.css';
-import React from 'react';
-import { useState } from 'react';
-export default function App() {
-  const [count, setCount] = useState(0)
-   function handleAdd() {
-    setCount(count + 1)
-   }
-   function handleSub(){
-    setCount(count - 1)
-   }
-   function handleReset(){
-    setCount(0)
-   }
+import { useState } from "react";
+import "./App.css"
+import React from 'react'
+
+function App() {
+  const [tasks, setTasks] = useState(
+  [
+  {id: 5271, name: "Record  React Lectures", completed: true},
+  {id: 7825, name: "Edit React Lectures", completed: false},
+  {id: 9391, name: "Watch Lectures", completed: false}
+  ]
+)
+  function handleDelete(id) {
+   setTasks(tasks.filter(task =>id !== task.id))
+  }
   return (
-    <>
-    <Header />
-    <div className='App'>
-    <div className='box'>
-      <p>{count}</p>
-      <button onClick={handleAdd} className='add'>ADD</button>
-      <button onClick={handleSub} className='sub'>SUB</button>
-      <button onClick={handleReset} className='reset'>RESET</button>
+    <div className="App">
+      <h1>Task List</h1>
+      <ul>
+        {tasks.map((task) =>(
+          <li key={task.id}>
+            <span>{task.id} - {task.name}</span>
+            <button onClick={() => handleDelete(task.id)} className="delete">Delete</button>
+          </li>
+        ))}
+      </ul>
     </div>
-    </div>
-    <Footer />
-    </>
-    );
+  )
 }
+
+export default App

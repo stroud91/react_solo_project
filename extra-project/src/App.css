@@ -4,37 +4,21 @@
   text-align: center;
 }
 
-.box {
-  max-width: 200px;
-  margin: 50px auto;
-  border-radius: 5px;
-  box-shadow: grey 0px 1px 4px;
-  padding: 5px;
+ul {
+  border: ridge;
+  box-shadow: gray 0px 2px 4px;
+  background-color: blanchedalmond;
+  color: darkblue;
+
 }
 
-p {
-  font-size: 24px;
-  text-align: center;
-}
-
-button {
-  padding: 10px;
+li {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 35px;
+  border: ridge;
+  padding: 20px;
   margin: 10px;
-  font-size: 20px;
-  box-shadow: grey 0px 1px 4px;
-}
+  box-shadow: green 0px 2px 5px;
+  text-align: start;
 
-.add {
-  color: white;
-  background-color: green;
-}
-
-.sub {
-  color: white;
-  background-color: red;
-}
-
-.reset{
-  color: white;
-  background-color: black;
 }
