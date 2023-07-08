@@ -1,6 +1,40 @@
-.active{
+.App{
   font-size: 50px;
   font-family: sans-serif;
-
+  text-align: center;
 }
 
+.box {
+  max-width: 200px;
+  margin: 50px auto;
+  border-radius: 5px;
+  box-shadow: grey 0px 1px 4px;
+  padding: 5px;
+}
+
+p {
+  font-size: 24px;
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+  box-shadow: grey 0px 1px 4px;
+}
+
+.add {
+  color: white;
+  background-color: green;
+}
+
+.sub {
+  color: white;
+  background-color: red;
+}
+
+.reset{
+  color: white;
+  background-color: black;
+}
