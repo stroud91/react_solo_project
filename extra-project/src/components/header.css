@@ -1,3 +1,9 @@
-.logo {
-    height: 80px;
-  }
+
+.box {
+  height: 100px;
+  max-width: 200px;
+  margin: 50px auto;
+  border-radius: 5px;
+  box-shadow: grey 0px 1px 4px;
+  padding: 5px;
+}
