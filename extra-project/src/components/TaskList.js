@@ -1,5 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import { BoxCard } from "./BoxCard";
+import { TaskCard } from "./TaskCard";
+
+
 
 export const TaskList = (props) => {
     
@@ -22,12 +26,22 @@ export const TaskList = (props) => {
       <ul>
         <button className="trigger" onClick={() => setShow(!show)}>Toggle</button>
         {show && tasks.map((task) =>(
-          <li key={task.id} className={task.completed ? "completed" : "incomplete"}>
-            <span>{task.id} - {task.name}</span>
-            <button onClick={() => handleDelete(task.id)} className="delete">Delete</button>
-          </li>
+           <TaskCard key={task.id} task={task} handleDelete={handleDelete}/>
         ))}
       </ul>
+      <BoxCard result ="success">
+           <p className="title">lorem5</p>
+          <p className="description">lorem10</p>
+      </BoxCard>
+      
+      <div className= "box warning">
+          <p className="title">lorem2</p>
+          <p className="description">lorem11</p>
+      </div>
+      <div className= "box alert">
+          <p className="title">lorem23</p>
+          <p className="description">lorem11</p>
+      </div>
     </>
     )
 }
